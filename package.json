@@ -27,7 +27,7 @@
     "prebuild": "npm run lint && npm run prettier && npm run test && npm run clean:build",
     "build": "tsc --project tsconfig.build.json",
     "prepublishOnly": "npm run build",
-    "preversion": "git checkout main && git pull && npm install && npm run build",
+    "preversion": "npm install && npm run build",
     "release:major": "npm version major",
     "release:minor": "npm version minor",
     "release:patch": "npm version patch",
