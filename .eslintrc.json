@@ -1,0 +1,11 @@
+{
+  "root": true,
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {}
+    }
+  ]
+}

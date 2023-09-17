@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "es2015",
+    "module": "commonjs",
+    "outDir": "dist",
+    "allowJs": false,
+    "sourceMap": true,
+    "declaration": true,
+    "esModuleInterop": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "strict": true
+  },
+  "exclude": ["node_modules", "dist"]
+}
