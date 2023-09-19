@@ -29,7 +29,7 @@ npm install @doodlesteam/flooks
 
 Configure your Flow connection and add a FlowProvider:
 
-```typescript
+```ts
 import { FlowProvider, configureChains } from '@doodlesteam/flooks';
 import Profile from './Profile';
 
@@ -51,7 +51,7 @@ function App() {
 
 Inside the profile, you can add more hooks to handle connection:
 
-```typescript
+```ts
 import {
   useFlowAccount,
   useFlowConnect,
@@ -80,7 +80,7 @@ function Profile() {
 
 `useFlowAccount` provides you with callbacks to handle connection:
 
-```typescript
+```ts
 import { useFlowAccount } from '@doodlesteam/flooks';
 import { useAccountContext } from '../contexts/AccountContext';
 
@@ -104,7 +104,7 @@ function Component {
 
 You can fetch data from the blockchain using `useFlowScript`:
 
-```typescript
+```ts
 import { useFlowScript } from '@doodlesteam/flooks';
 
 const script = `
@@ -132,7 +132,7 @@ Flooks uses [react-query](https://www.npmjs.com/package/@tanstack/react-query) i
 
 Doing the same with fcl:
 
-```typescript
+```ts
 import { useEffect, useState } from "react";
 import * as fcl from "@onflow/fcl";
 
@@ -161,7 +161,7 @@ function Component {
 
 Execute transactions using `useFlowTransaction`:
 
-```typescript
+```ts
 import { useFlowTransaction } from '@doodlesteam/flooks';
 
 const transaction = `
@@ -220,7 +220,7 @@ function Component {
 
 Doing the same with fcl:
 
-```typescript
+```ts
 import { useEffect, useState } from "react";
 import * as fcl from "@onflow/fcl";
 
@@ -289,7 +289,7 @@ function Component {
 
 You can subscribe to events using `useFlowEvent`:
 
-```typescript
+```ts
 import { useFlowEvent } from '@doodlesteam/flooks';
 
 interface TokensWithdrawnData {
@@ -321,7 +321,7 @@ eventName: 'A.7e60df042a9c0868.FlowToken.TokensWithdrawn',
 
 Are you waiting just for the first event emitted? Use the `once` argument:
 
-```typescript
+```ts
 import { useFlowEvent } from '@doodlesteam/flooks';
 
 function Component {
