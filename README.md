@@ -88,7 +88,7 @@ function Component {
   const { dispatch } = useAccountContext();
 
   const account = useFlowAccount({
-    onConnect: (connectedAccount: ) => {
+    onConnect: (connectedAccount) => {
       dispatch({ type: 'accountConnected', payload: connectedAccount });
     },
     onDisconnect: () => {
