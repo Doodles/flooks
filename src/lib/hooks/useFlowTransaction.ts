@@ -10,6 +10,7 @@ import {
   sendFlowTransaction,
 } from '@doodlesteam/floo';
 import { UseMutationOptions, useMutation } from '@tanstack/react-query';
+import isEqual from 'lodash/isEqual';
 import { useEffect, useState } from 'react';
 
 export interface FlowTransactionResultPending {
@@ -84,6 +85,8 @@ export const useFlowTransaction = (
   const [error, setError] = useState<FlowTransactionError | undefined>(
     undefined,
   );
+  const [previousArgs, setPreviousArgs] = useState<FlowType[]>();
+  const [previousCode, setPreviousCode] = useState<string>();
 
   const checkTransactionValidity = () => {
     if (props.enabled === false) {
@@ -98,6 +101,14 @@ export const useFlowTransaction = (
   };
 
   useEffect(() => {
+    if (
+      isEqual(previousArgs, props.args) &&
+      isEqual(previousCode, props.code)
+    ) {
+      return;
+    }
+    setPreviousArgs(props.args);
+    setPreviousCode(props.code);
     try {
       parseFlowArgs({
         code: props.code,
@@ -115,7 +126,7 @@ export const useFlowTransaction = (
         console.error(error);
       }
     }
-  }, [props]);
+  }, [props.code, props.args, props.enabled, props.onInvalidTransaction]);
 
   const mutation = useMutation<TransactionSubscriber, string>({
     ...props,
