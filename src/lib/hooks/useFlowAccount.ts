@@ -17,7 +17,7 @@ export const useFlowAccount = ({
   const previousUser = usePrevious(user);
 
   useEffect(() => {
-    return fcl.currentUser().subscribe(setUser);
+    fcl.currentUser().subscribe(setUser);
   }, []);
 
   useEffect(() => {
