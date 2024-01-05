@@ -20,6 +20,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "prepare": "husky install",
     "lint": "eslint src test",
     "prettier": "prettier src test --check",
     "test": "jest",
@@ -34,20 +35,21 @@
     "postversion": "npm publish"
   },
   "devDependencies": {
-    "@nx/eslint-plugin": "16.5.3",
+    "@nx/eslint-plugin": "^17.1.2",
     "@onflow/types": "^1.1.0",
     "@testing-library/react": "^14.0.0",
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/jest": "^29.5.4",
     "@types/react": "^18.2.21",
-    "@typescript-eslint/eslint-plugin": "5.61.0",
-    "@typescript-eslint/parser": "5.61.0",
-    "eslint": "^8.49.0",
-    "eslint-config-prettier": "^8.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
     "jest": "^29.7.0",
-    "prettier": "^3.0.0",
+    "prettier": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ts-jest": "^29.1.1"
@@ -57,9 +59,11 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@doodlesteam/floo": "^0.0.4",
+    "@doodlesteam/floo": "^0.1.0",
     "@onflow/fcl": "^1.6.0",
     "@onflow/typedefs": "^1.1.1",
-    "@tanstack/react-query": "^4.35.3"
+    "@tanstack/react-query": "^4.35.3",
+    "@types/lodash": "^4.14.200",
+    "lodash": "^4.17.21"
   }
 }
