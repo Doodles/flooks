@@ -59,7 +59,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@doodlesteam/floo": "^0.0.4",
+    "@doodlesteam/floo": "^0.1.0",
     "@onflow/fcl": "^1.6.0",
     "@onflow/typedefs": "^1.1.1",
     "@tanstack/react-query": "^4.35.3",
